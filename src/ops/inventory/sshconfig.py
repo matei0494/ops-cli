@@ -49,7 +49,7 @@ class SshConfigGenerator(object):
                           f"the proxy is running.",
                           color='blue',
                           stderr=True)
-            return self.generate_ssh_config_from_template(ssh_config_tpl_path, ssh_proxy_port)
+            return self.generate_ssh_config_from_template(ssh_config_tpl_path, scb_proxy_port=ssh_proxy_port)
         elif teleport_enabled:
             display.display(f"Using Teleport for SSH connections.\n"
                           f"Make sure you are logged in with 'tsh login'.",
